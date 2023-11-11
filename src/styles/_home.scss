@@ -1,0 +1,63 @@
+@use 'variaveis';
+@use 'sass:math';
+
+.home {
+    padding: 5.6vw;
+    min-height: 80vh;
+    background: 
+    linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+    url(../../dist/images/nintchdbpict000255744918.webp);
+    background-size: cover;
+
+    &__content {
+        max-width: 750px;
+        margin-top: 3vh;
+
+        .title--big {
+            margin: 20px 0px;
+            color: variaveis.$corDourado;
+            text-decoration: underline variaveis.$corVermelho;
+        }
+
+        .text {
+            margin: 20px 0px;
+            font-size: 20px;
+            line-height: 30px;
+        }
+
+        .title, 
+        .text {
+            color: variaveis.$corDourado;
+            font-family: variaveis.$fontSecundaria;
+        }
+
+        &__reviews {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: auto;
+
+            &__review {
+                color: variaveis.$corDourado;
+                margin: 10px 5px;
+            }
+        }
+
+        &__button {
+            font-family: variaveis.$fontSecundaria;
+            font-weight: bold;
+            font-size: 1.5em;
+            cursor: pointer;
+            padding: 20px;
+            border-radius: 50px;
+            border: 1px solid variaveis.$corDourado;
+            background-color: variaveis.$corVermelho;
+            color: variaveis.$corDourado;
+
+            &:hover {
+                transform: scale(1.1);
+                background-color: lighten(variaveis.$corVermelho, 5%);
+            }
+        }
+    }
+}

@@ -1,0 +1,52 @@
+@use 'variaveis';
+
+.sobre {
+    padding: 4.8vw;
+    text-align: center;
+    background-color: darken(#212529, 10%); 
+
+    &__container {
+        margin: 0 auto;
+        max-width: 80%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        &__text {
+            display: block;
+            text-align: left;
+            border-radius: 10px;
+
+            .title--small {
+                margin: 20px 0px;
+                font-family: variaveis.$fontSecundaria
+            }
+
+            .title--big {
+                text-decoration: underline variaveis.$corVermelho;
+            }
+
+            .text--big {
+                margin: 20px 0px;
+            }
+
+            .text {
+                margin: 20px 0px;
+            }
+
+            .title--small,
+            .title--big,
+            .text--big,
+            .text {
+                margin-left: 15px;
+                color: variaveis.$corDourado;
+            }
+        }
+
+        img {
+            max-height: 480px;
+            border-radius: 10px;
+            margin-left: 20px;
+        }
+    }
+}

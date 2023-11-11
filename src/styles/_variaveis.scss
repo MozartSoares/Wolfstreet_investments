@@ -1,0 +1,23 @@
+@use 'sass:math';
+
+$corDourado: #FFD700;
+$corVermelho: darken(#FF2400, 15%);
+
+$fontSecundaria: Roboto, sans-serif;
+$fontprincipal: 'playfair display', serif;
+
+@function pixelParaEm($alvoEmPixel, $contextoEmPixel: 16px) {
+    @return math.div($alvoEmPixel , $contextoEmPixel)+em;
+}
+
+@mixin text($fontSize: 16px) {
+    font-size: pixelParaEm($fontSize);
+    line-height: calc($fontSize + 5px);
+    font-family: $fontSecundaria;
+}
+
+@mixin title($fontSize: 32px) {
+    @include text($fontSize);
+    font-family: $fontprincipal;
+    font-weight: bold;
+}

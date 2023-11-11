@@ -1,0 +1,36 @@
+
+@use 'variaveis';
+@use 'header';
+@use 'home';
+@use 'sobre';
+@use 'equipe';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.text--small {
+    @include variaveis.text(14px);
+}
+
+.text {
+    @include variaveis.text();
+}
+
+.text--big {
+    @include variaveis.text(24px);
+}
+
+.title--small {
+    @include variaveis.title(24px);
+}
+
+.title {
+    @include variaveis.title();
+}
+
+.title--big {
+    @include variaveis.title(40px);
+}
