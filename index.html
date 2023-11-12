@@ -12,6 +12,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap"
         rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" rel="stylesheet">
 
 </head>
 
@@ -19,10 +20,12 @@
     <header class="header">
         <div class="header__container">
             <h1 class="header__title title">Wolfstreet Investments</h1>
+            <div class="header__title__menu" >
+                <i class="bi bi-list" onclick="toggleMenu()"></i>
             <nav>
                 <ul class="header__menu">
                     <li class="header__menu__item">
-                        <a class="header__menu__item__link text" href="#home">Home</a>
+                        <a class="header__menu__item__link text current-section" href="#home">Home</a>
                     </li>
                     <li class="header__menu__item">
                         <a class="header__menu__item__link text" href="#sobre">Sobre</a>
@@ -31,13 +34,10 @@
                         <a class="header__menu__item__link text" href="#equipe">Equipe</a>
                     </li>
                     <li class="header__menu__item">
-                        <a class="header__menu__item__link text" href="#">Investimentos</a>
+                        <a class="header__menu__item__link text" href="#investimentos">Investimentos</a>
                     </li>
                     <li class="header__menu__item">
-                        <a class="header__menu__item__link text" href="#">Depoimentos</a>
-                    </li>
-                    <li class="header__menu__item">
-                        <a class="header__menu__item__link text" href="#">Contato</a>
+                        <a class="header__menu__item__link text" href="#contato">Contato</a>
                     </li>
                 </ul>
             </nav>
@@ -91,9 +91,7 @@
                     investimentos. Inspirada nas reviravoltas do mercado financeiro, a empresa busca proporcionar aos
                     seus clientes não apenas lucros sólidos, mas também uma experiência única e personalizada.</p>
             </div>
-            <div>
-                <img src="./dist/images/sobre.png" alt="Foto de Jordan">
-            </div>
+            <img src="./dist/images/sobre.png" alt="Foto de Jordan">
         </div>
     </section>
     <section class="equipe" id="equipe">
@@ -107,39 +105,164 @@
                 sucesso financeiro.</p>
         </div>
         <div class="container">
-            <div class="row">
-                <div class="card-deck-wrapper">
-                    <div class="card-deck d-flex">
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <h2 class="card-title text-center mb-2">Jordan Belfort</h2>
-                            <div class="card bg-dark mx-3 text-white border-warning">
-                                <div class="card-img-overlay">
-                                </div>
-                                <img class="card-img-top" src="dist/images/jordan.png" alt="Foto do especialista Jordan Belfort">
+            <div class="card-deck">
+                <div class="row">
+                    <div class="col-lg-4 col-md-12">
+                        <h2 class="card-title text-center mb-2">Jordan Belfort</h2>
+                        <div class="card bg-dark mx-3 text-white border-warning">
+                            <div class="card-img-overlay">
                             </div>
+                            <img class="card-img-top" src="dist/images/jordan.png"
+                                alt="Foto do especialista Jordan Belfort">
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <h2 class="card-title text-center mb-2">Donnie Azoff</h2>
-                            <div class="card bg-dark mx-3 text-white border-warning">
-                                <div class="card-img-overlay">
-                                </div>
-                                <img class="card-img-top" src="dist/images/jonah.png" alt="Foto do especialista Donnie Azoff">
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <h2 class="card-title text-center mb-2">Donnie Azoff</h2>
+                        <div class="card bg-dark mx-3 text-white border-warning">
+                            <div class="card-img-overlay">
                             </div>
+                            <img class="card-img-top" src="dist/images/jonah.png"
+                                alt="Foto do especialista Donnie Azoff">
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <h2 class="card-title text-center mb-2">Chester Ming</h2>
-                            <div class="card bg-dark mx-3 text-white border-warning">
-                                <div class="card-img-overlay">
-                                </div>
-                                <img class="card-img-top" src="dist/images/chester.png" alt="Foto do especialista Chester Ming">
+                    </div>
+                    <div class="col-lg-4 col-md-12">
+                        <h2 class="card-title text-center mb-2">Chester Ming</h2>
+                        <div class="card bg-dark mx-3 text-white border-warning">
+                            <div class="card-img-overlay">
                             </div>
+                            <img class="card-img-top" src="dist/images/chester.png"
+                                alt="Foto do especialista Chester Ming">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
+    <section class="investimentos" id="investimentos">
+        <div class="investimentos__container">
+            <h3 class="title--small">Sobre nossos serviços</h3>
+            <h2 class="title--big">Confira abaixo alguns dos serviços que oferecemos:</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <h3 class="title"><i class="bi bi-graph-up"></i>
+                        <br>
+                        Portfólio Personalizado
+                    </h3>
+                    <p class="text">Desenvolvemos portfólios de investimento exclusivos, alinhados aos seus objetivos
+                        financeiros e tolerância ao risco.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <h3 class="title"><i class="bi bi-person-check"></i>
+                        <br>
+                        Consultoria Financeira
+                    </h3>
+                    <p class="text">Oferecemos consultoria personalizada, fornecendo insights e estratégias financeiras
+                        para maximizar seus investimentos.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <h3 class="title"><i class="bi bi-tree"></i>
+                        <br>
+                        Investimentos Sustentáveis
+                    </h3>
+                    <p class="text">Comprometemo-nos com investimentos sustentáveis, buscando retornos financeiros
+                        enquanto contribuímos para um futuro mais sustentável.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <h3 class="title"><i class="bi bi-box"></i>
+                        <br>
+                        Diversificação de ativos
+                    </h3>
+                    <p class="text"> Utilizamos estratégias de diversificação para equilibrar seu portfólio, reduzindo
+                        riscos e otimizando retornos.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <h3 class="title"><i class="bi bi-file-earmark-text"></i>
+                        <br>
+                        Aposentadoria Planejada
+                    </h3>
+                    <p class="text">Planejamos estrategicamente sua aposentadoria, garantindo que você alcance seus
+                        objetivos financeiros no longo prazo.</p>
+                </div>
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <h3 class="title"><i class="bi bi-globe"></i>
+                        <br>
+                        Análise de Mercado Global
+                    </h3>
+                    <p class="text">Realizamos análises abrangentes do mercado global para identificar oportunidades de
+                        investimento em constante evolução.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="contato p-5" id="contato">
+        <div class="container contato__container">
+            <div class="row py-4">
+                <h3 class="title--small">Conquiste seus objetivos financeiros</h3>
+                <h2 class="title--big">Conecte-se Conosco na Wolfstreet Investments!</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-7 mb-5">
+                    <form>
+                        <div class="mb-3">
+                            <label for="nome" class="form-label fw-bold">Seu nome:</label>
+                            <input type="text" id="nome" class="form-control border-danger" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Seu e-mail:</label>
+                            <input type="email" id="email" class="form-control border-danger" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefone" class="form-label fw-bold">Seu telefone:</label>
+                            <input type="tel" id="telefone" class="form-control border-danger">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensagem" class="form-label fw-bold">Sua mensagem:</label>
+                            <textarea id="mensagem" class="form-control border-danger" required></textarea>
+                        </div>
+                        <button type="submit" class="btn fw-bold">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-md-5 ml-3">
+                    <div class="row">
+                        <h3 class="fs-4 text--big ms-4">
+                            <i class="bi bi-hand-thumbs-up-fill"></i>
+                            Redes sociais
+                        </h3>
+                        <ul class="ms-4">
+                            <li class="fs-5">
+                                <a href="#">
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                            </li>
+                            <li class="fs-5 mx-1">
+                                <a href="#">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                            <li class="fs-5">
+                                <a href="#">
+                                    <i class="bi bi-whatsapp"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="row mt-4 ms-3">
+                        <h3 class="fs-4 text--big">
+                            <i class="bi bi-cursor-fill"></i>
+                            Endereço
+                        </h3>
+                        <p class="text--small">123 Wall Street, Suite 456
+                            Nova Iorque, NY 10005
+                            - EUA</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./dist/scripts/main.js"></script>
 </body>
 
 </html>

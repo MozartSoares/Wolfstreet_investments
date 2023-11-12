@@ -1,0 +1,44 @@
+@use 'variaveis';
+
+.investimentos {
+    background-color: darken(#212529, 10%);
+    padding: 4.8vw;
+
+    &__container {
+        text-align: center;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        padding-top: 20px;
+        max-width: 80%; 
+
+        .title--small {
+            color: variaveis.$corDourado;
+            font-family: variaveis.$fontSecundaria;
+        }
+
+        .title--big {
+            color: variaveis.$corDourado;
+            text-decoration: underline solid variaveis.$corVermelho;
+        }
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        
+        i {
+            padding: 20px;
+        }
+
+        .title {
+            display: inline;
+            color: variaveis.$corDourado;
+        }
+
+        .text {
+            margin-top: 20px;
+            color: variaveis.$corDourado;
+        }
+    }
+}

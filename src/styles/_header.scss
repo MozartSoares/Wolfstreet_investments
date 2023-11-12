@@ -4,33 +4,50 @@
     position: sticky;
     top: 0;
     left: 0;
-    background-color: #000;
-    transition: background-color .5s ease;
+    background-color: darken(#212529, 10%); 
     z-index: 3;
-
-    &--is--shown {
-        background-color: #000;
-    }
 
     &__title {
         font-family: variaveis.$fontprincipal;
         padding: 15px;
         font-weight: bold;
         color:variaveis.$corDourado;
+    
+        &__menu {
+            font-size: 20px;
+            color: variaveis.$corVermelho;
+            cursor: pointer;
+
+        }
     }
 
     &__container{
-        width: 80%;
+        max-width: 80%;
         margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media (max-width: 845px) {
+            display: block;
+            text-align: center;
+        }
     }
 
     &__menu {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        
+        @media (max-width: 845px) {
+            padding-left: 0;
+            margin: 0;
+        }
+
+        @media (max-width: 573px) {
+            display: block;
+            text-align: center;
+        }
 
         &__item {
             align-items: center;
@@ -41,7 +58,6 @@
             &__link {
                 color: variaveis.$corDourado;
                 text-decoration: none;
-                border-bottom: 2px solid transparent;
                 font-family: variaveis.$fontSecundaria;
                 font-weight: bold;
 
@@ -53,5 +69,40 @@
                 }
             }
         }
+    }
+}
+
+@media (max-width: 573px) {
+    .header__menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background-color: darken(#212529, 10%);
+        z-index: 1;
+    
+
+    &.active {
+        display: flex;
+    }
+}
+    .header__menu__item {
+        margin: 0;
+        text-align: center;
+        padding: 10px;
+        font-size: 20px;
+    }
+
+    .header__title__menu {
+        display: block;
+    }
+}
+
+@media (min-width: 574px) {
+    .header__title__menu>i {
+        display: none;
+        visibility: none;
     }
 }

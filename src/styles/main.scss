@@ -4,6 +4,8 @@
 @use 'home';
 @use 'sobre';
 @use 'equipe';
+@use 'investimentos';
+@use 'contato';
 
 * {
     box-sizing: border-box;
@@ -33,4 +35,9 @@
 
 .title--big {
     @include variaveis.title(40px);
+}
+
+.current-section {
+    color: variaveis.$corVermelho;
+    border-bottom: 2px solid variaveis.$corVermelho;
 }

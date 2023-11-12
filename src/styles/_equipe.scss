@@ -27,14 +27,20 @@
         }
     }    
         .card-img-top {
-            max-height: 460px;
+            max-height: 400px;
             height: 100%;
             margin: 0 auto;
             box-shadow: 0 0 10px rgb(0,0,0,.2);
+
+            @media (max-width: 992px) {
+                max-height: 100%;
+                max-width: 100%;
+            }
+
         }
 
         .card {
-            padding: 1em .5em.5em;
+            padding: 1em .5em .5em;
             text-align: center;
             box-shadow: 0 5px 10px rgba(0,0,0 ,.2);
         }

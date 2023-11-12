@@ -1,0 +1,74 @@
+@use 'variaveis';
+
+.contato {
+    background-color: #212529;
+
+    &__container {
+    
+        .title--small {
+            text-align: center;
+            color: variaveis.$corDourado;
+        }
+
+        .title--big {
+            text-align: center;
+            color: variaveis.$corDourado;
+            text-decoration: underline solid variaveis.$corVermelho;
+        }
+
+        .text--big {
+            color: variaveis.$corDourado;
+            font-family: variaveis.$fontprincipal;
+        }
+
+        .text--small {
+            color: variaveis.$corDourado;
+            font-family: variaveis.$fontSecundaria;
+        }
+
+        .form-control {
+            background-color: darken(#fff, 60%);
+            color: variaveis.$corDourado;
+            font-family: variaveis.$fontprincipal;
+            font-weight: bold;
+
+            &:focus {
+                color: variaveis.$corDourado;
+                font-family: variaveis.$fontprincipal;
+                font-weight: bold;
+                background-color: darken(#fff, 60%)
+            }
+        }
+
+        .bi {
+            text-decoration: none;
+            color: variaveis.$corDourado;
+        }
+        
+
+        label {
+            color: variaveis.$corDourado;
+            font-family: variaveis.$fontprincipal;
+        }
+
+        .btn {
+            font-family: variaveis.$fontSecundaria;
+            font-size: 1.5em;
+            width: 50%;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 10px;
+            border: 1px solid variaveis.$corDourado;
+            background-color: variaveis.$corVermelho;
+            color: variaveis.$corDourado;
+
+            &:hover {
+                transform: scale(1.05);
+                background-color: lighten(variaveis.$corVermelho, 5%);
+            }
+            
+
+            
+        }
+    }
+}
